@@ -85,14 +85,32 @@ Muy útil para reproducir el entorno de ejecución. **Importante**:Permite expor
 <code>conda env create -f environment_file_name.yml</code>
 
 ## Creación del entorno virtual para las prácticas
-<code>conda create --name miot_ml</code>
+<code>conda create --name miot_gdpi</code>
+
+**Nota**: Apuntad el directorio de instalación para poder emplear *pip* dentro del entorno virtual.
+
+
+A continuación, activad el entorno recién creado: 
+
+<code>conda activate miot_gdpi</code>
+
+**Paquetes requeridos para las prácticas aprendizaje incrementa (*Online Learning*)**
+
+<code>conda install jupyter scikit-learn=1.5.2 pandas matplotlib python-graphviz rich</code>
+
+**Nota**: En al actualidad la última versión de River (0.22) tiene una incompatibilidad con la última versión de scikit-learn=1.6.1, y  esa es la razón por la que es necesario emplear la versión de scikit-learn=1.5.2.
+
+Para obtener la versión más reciente del paquete River (0.22.0), deberás instalarlo usando pip dentro de tu entorno virtual. **Asegúrate de utilizar la versión de pip que se encuentra específicamente dentro de tu entorno virtual, y no la global**. Localiza el directorio de tu entorno virtual, que normalmente se encuentra en una ruta similar a /anaconda/envs/nombre_del_entorno_virtual/ y ejecuta el siguiente comando.
+
+<code>/home/user/anaconda/envs/miot_gdpi/bin/pip install river</code>
+
+**Nota**: Para localizar la ruta del entorno virtual podéis ejecutar el siguiente comando (Linux):
+
+<code>echo $CONDA_PREFIX</code>
+
+**IMPORTANTE**: Los comandos deben ejecutarse dentro del entorno, es necesario tenerlo activado!
 
 
 
-**Paquetes requeridos para las prácticas**
 
-Para instalar los paquetes requeridos para las prácticas es necesario ejecutar el siguiente comando (sustituid los *nombre_paquete* por los paquetes concretos): 
 
-<code>conda install nombre_paquete1 nombre_paquete2 ... nombre_paquete_n</code>
-
-Los paquetes requeridos para las prácticas son:
