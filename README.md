@@ -94,7 +94,7 @@ A continuación, activad el entorno recién creado:
 
 <code>conda activate miot_gdpi</code>
 
-**Paquetes requeridos para las prácticas aprendizaje incrementa (*Online Learning*)**
+**Paquetes requeridos para las prácticas aprendizaje incremental (*Online Learning*)**
 
 <code>conda install jupyter scikit-learn=1.5.2 pandas matplotlib python-graphviz rich</code>
 
@@ -108,7 +108,7 @@ Para obtener la versión más reciente del paquete River (0.22.0), deberás inst
 
 <code>echo $CONDA_PREFIX</code>
 
-**IMPORTANTE**: Los comandos deben ejecutarse dentro del entorno, es necesario tenerlo activado!
+**IMPORTANTE**: Todos los comandos de esta sección están pensados para ejecutarse dentro del entorno, por lo que es necesario tenerlo activado.
 
 
 
