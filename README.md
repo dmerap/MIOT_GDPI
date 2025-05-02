@@ -106,6 +106,7 @@ Para obtener la versión más reciente del paquete River (0.22.0), deberás inst
 
 
 **Paquetes requeridos para las prácticas con modelos de redes neuronales profundas**
+
 <code>conda install seaborn kagglehub </code>
 
 Para obtener las versiones más recientes de **Keras** y **Tensorflow** emplearemos el comando `pip` dentro de nuestro entorno virtual.**Asegúrate de utilizar la versión de pip que se encuentra específicamente dentro de tu entorno virtual, y no la global**. Localiza el directorio de tu entorno virtual, que normalmente se encuentra en una ruta similar a /anaconda/envs/nombre_del_entorno_virtual/ y ejecuta el siguiente comando.
