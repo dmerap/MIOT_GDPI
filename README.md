@@ -100,9 +100,26 @@ A continuación, activad el entorno recién creado:
 
 **Nota**: En al actualidad la última versión de River (0.22) tiene una incompatibilidad con la última versión de scikit-learn=1.6.1, y  esa es la razón por la que es necesario emplear la versión de scikit-learn=1.5.2.
 
-Para obtener la versión más reciente del paquete River (0.22.0), deberás instalarlo usando pip dentro de tu entorno virtual. **Asegúrate de utilizar la versión de pip que se encuentra específicamente dentro de tu entorno virtual, y no la global**. Localiza el directorio de tu entorno virtual, que normalmente se encuentra en una ruta similar a /anaconda/envs/nombre_del_entorno_virtual/ y ejecuta el siguiente comando.
+Para obtener la versión más reciente del paquete River (0.22.0), deberás instalarlo usando `pip` dentro de tu entorno virtual. **Asegúrate de utilizar la versión de pip que se encuentra específicamente dentro de tu entorno virtual, y no la global**. Localiza el directorio de tu entorno virtual, que normalmente se encuentra en una ruta similar a /anaconda/envs/nombre_del_entorno_virtual/ y ejecuta el siguiente comando.
 
 <code>/home/user/anaconda/envs/miot_gdpi/bin/pip install river</code>
+
+
+**Paquetes requeridos para las prácticas con modelos de redes neuronales profundas**
+<code>conda install seaborn kagglehub </code>
+
+Para obtener las versiones más recientes de **Keras** y **Tensorflow** emplearemos el comando `pip` dentro de nuestro entorno virtual.**Asegúrate de utilizar la versión de pip que se encuentra específicamente dentro de tu entorno virtual, y no la global**. Localiza el directorio de tu entorno virtual, que normalmente se encuentra en una ruta similar a /anaconda/envs/nombre_del_entorno_virtual/ y ejecuta el siguiente comando.
+
+<code>/home/user/anaconda/envs/miot_gdpi/bin/pip install keras tensorflow</code>
+
+
+**Nota**: los Notebooks fueron probados con las versiones:
+- tensorflow-2.19.0
+- keras-3.9.2
+
+
+
+
 
 **Nota**: Para localizar la ruta del entorno virtual podéis ejecutar el siguiente comando (Linux):
 
