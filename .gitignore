@@ -1,6 +1,7 @@
 .ipynb_checkpoints
 *Solved.ipynb
 *SOLVED.ipnyb
+*.keras
 scripts/
 __old__/
 __solutions__/
