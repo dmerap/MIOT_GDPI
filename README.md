@@ -5,7 +5,7 @@ Este repositorio contiene un conjunto de tutoriales que sirven de introducción 
 
 - [Equipo docente](#equipo-docente)
 - [Entorno de desarrollo](#entornos-de-desarrollo)
- - [Gestión de paquetes y entornos con uv](#gestion-de-paquetes-y-entornos-con-uv)
+ - [Gestión de paquetes y entornos con uv](#gestión-de-paquetes-y-entornos-con-uv)
  - [Gestión de paquetes y entornos con CONDA](#gestión-de-paquetes-y-entornos-con-conda) 
 
 
@@ -120,7 +120,7 @@ Esto garantiza que el comando se ejecute utilizando el entorno virtual del proye
 
 
 
-## Guía rápida: gestión de paquetes y entornos con CONDA
+## Gestión de paquetes y entornos con CONDA
 Se proporciona esta guía a modo *legacy* y para los estudiantes que prefieren gestionar el entorno virtual con CONDA, aunque el soporte desde la parte docente será limitado.
 
 
@@ -189,7 +189,7 @@ Muy útil para reproducir el entorno de ejecución. **Importante**:Permite expor
 **Crear e importar la configuración de un entorno desde un fichero**
 <code>conda env create -f environment_file_name.yml</code>
 
-## Creación del entorno virtual para las prácticas de GDPI
+### Creación del entorno virtual para las prácticas con CONDA
 <code>conda create --name miot_gdpi</code>
 
 **Nota**: Apuntad el directorio de instalación para poder emplear *pip* dentro del entorno virtual.
