@@ -5,8 +5,8 @@ Este repositorio contiene un conjunto de tutoriales que sirven de introducción 
 
 - [Equipo docente](#equipo-docente)
 - [Entorno de desarrollo](#entornos-de-desarrollo)
- - [Gestión de paquetes y entornos con uv](#gestión-de-paquetes-y-entornos-con-uv)
- - [Gestión de paquetes y entornos con CONDA](#gestión-de-paquetes-y-entornos-con-conda) 
+ - [Gestión de paquetes y entornos con uv](#gesti%C3%B3n-de-paquetes-y-entornos-con-uv)
+ - [Gestión de paquetes y entornos con CONDA](#gesti%C3%B3n-de-paquetes-y-entornos-con-conda) 
 
 
 
