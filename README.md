@@ -1,7 +1,7 @@
 ![Banner](img/MIOT_GDPI_header.png)
 # MIOT_GDPI
 
-Este repositorio contiene un conjunto de tutoriales que sirven de introducción a los temas tratados en la asignatura de Gemelos Digitales para Plantas Industriales (GDPI) asociada al Máster Universitario en Internet de las Cosas - IoT (MUIoT) impartido por las tres universidades de Galicia: Universidad de A Coruña (UDC), Universidad de Santiago de Compostela (USC) y Universidad de Vigo (UVigo).
+Este repositorio contiene un conjunto de tutoriales que sirven de introducción a los temas tratados en la asignatura de Gemelos Digitales para Plantas Industriales (GDPI).    Esta asignatura está asociada al Máster Universitario en Internet de las Cosas - IoT (MUIoT), impartido por las tres universidades de Galicia: Universidad de A Coruña (UDC), Universidad de Santiago de Compostela (USC) y Universidad de Vigo (UVigo).
 
 - [Equipo docente](#equipo-docente)
 - [Entorno de desarrollo](#entornos-de-desarrollo)
@@ -20,20 +20,23 @@ Este repositorio contiene un conjunto de tutoriales que sirven de introducción 
 * Francisco Zayas Gato (UDC)
 
 # Entornos de desarrollo
-Las prácticas de esta materia se desarrollarán a través de Notebooks. Para ejecutarlas, necesitarás instalar Python, un servidor de Notebooks (por ejemplo, Jupyter) y todos los paquetes requeridos para cada una de las unidades prácticas. Hay diferentes opciones para poder desarrollar los trabajos (podéis emplear la que consideréis más apropiada). En este manual os damos varias alternativas:
+Las prácticas de esta materia se desarrollarán a través de Notebooks. Para ejecutarlas, necesitarás instalar Python, un servidor de Notebooks (por ejemplo, Jupyter) y todos los paquetes requeridos para cada una de las unidades de trabajo. Hay diferentes opciones para poder desarrollar los prácticas (podéis emplear la que consideréis más apropiada). En este manual os damos varias alternativas:
 
 
 1. [Google Colab](https://colab.research.google.com/): Colab es un entorno de desarrollo de Google que permite cargar y crear Notebooks. También permite gestionar entornos e instalar nuevos paquetes (librerías) ejecutando el comando  <code>!pip install nombre_paquete</code>. Podéis acceder directamente con vuestra cuenta de Google, aunque la cuenta gratuita tiene algunas limitaciones (la mayoría relacionadas con el acceso a recursos informáticos). 
 
-2. [Python](https://www.python.org/downloads/) y [pip](https://pip.pypa.io/en/stable/installation/): Instalación directa de Python y pip a nivel de sistema (pip se instala automáticamente si has instalado Python desde la página web oficial). Una vez instalado Python, es necesario instalar Jupyter y el resto de los paquetes para el desarrollo de las prácticas. La instalación de paquetes se hace a nivel de sistema empleando el comando <code>pip install nombre_paquete</code>. Esta aproximación es simple, pero instalar a nivel de sistema puede generar conflictos.
-3. [Anaconda](https://www.anaconda.com/) es un framework de desarrollo basado en entornos virtuales y enfocado a la Ciencia de Datos y el Machine Learning, que está disponible en Windows, Linux y MacOS. Este framework está compuesto por diferentes paquetes y software, incluyendo Jupyter y [conda](https://docs.conda.io/en/latest/). Conda es un sistema para la gestión de entornos virtuales que nos permite tener diferentes entornos conviviendo en el mismo sistema. Cada entorno puede instalar los paquetes y versiones necesarios independientemente del resto. Mientras que `pip` instala paquetes a nivel de sistema y puede causar conflictos, `conda` permite tener cada configuración  en un entorno virtual separado sin conflictos.  Todas las dependencias son gestionadas por conda. Los usuarios pueden activar y desactivar entornos virtuales a su discreción. La forma de gestionar los paquetes es usando el comando <code>conda install xxx</code> en lugar de `pip`. En caso de que un paquete no esté disponible en `conda`, es posible instalarlo a través de una versión de `pip` interna asociada al sistema `conda`.
+2. [Python](https://www.python.org/downloads/) y [pip](https://pip.pypa.io/en/stable/installation/): Instalación directa de Python y pip a nivel de sistema (pip se instala automáticamente si has instalado Python desde la página web oficial). Una vez instalado Python, es necesario instalar Jupyter y el resto de los paquetes para el desarrollo de las prácticas. La instalación de paquetes se hace a nivel de sistema empleando el comando <code>pip install nombre_paquete</code>. Esta aproximación es simple, pero instalar a nivel de sistema puede generar conflictos entre varios proyectos.
+3. [Anaconda](https://www.anaconda.com/) es un framework de desarrollo basado en entornos virtuales y enfocado a la Ciencia de Datos y el Machine Learning, que está disponible en Windows, Linux y MacOS. Este framework está compuesto por diferentes paquetes y software, incluyendo Jupyter y [conda](https://docs.conda.io/en/latest/). 
+Conda es un sistema para la gestión de entornos virtuales que nos permite tener diferentes entornos conviviendo en el mismo sistema. Cada entorno puede instalar los paquetes y versiones necesarios independientemente del resto. Mientras que `pip` instala paquetes a nivel de sistema y puede causar conflictos, `conda` permite tener cada configuración  en un entorno virtual separado sin conflictos.  Todas las dependencias son gestionadas por conda. Los usuarios pueden activar y desactivar entornos virtuales a su discreción. La forma de gestionar los paquetes es usando el comando <code>conda install xxx</code> en lugar de `pip`. En caso de que un paquete no esté disponible en `conda`, es posible instalarlo a través de una versión de `pip` interna asociada al sistema `conda`.
+*Nota: debéis tener en cuenta que este framework instala muchos más paquetes y programas de los que son necesarios para el desarrollo de esta asignatura.*
 4. [Miniconda](https://docs.conda.io/en/latest/miniconda.html) es un instalador mínimo gratuito para conda,  que está disponible en Windows, Linux y MacOS. Es una versión pequeña de Anaconda que incluye *solo* conda, Python, los paquetes de los que dependen y un pequeño número de otros paquetes útiles.
 Anaconda es un framework enorme con muchos paquetes innecesarios para nuestras prácticas. Miniconda permite al usuario instalar solo los paquetes mínimos y necesarios. Cabe destacar que Jupyter no está incluido en Miniconda y que debe instalarse como un nuevo paquete  <code>conda install jupyter</code>.
 
-5. [UV](https://docs.astral.sh/uv/) (*Recomendado*) Gestor de paquetes y entornos de Python caracterizado por su rapidez y que sustituye "oficialmente" a conda en este curso. Crea entornos virtuales estándar y utiliza flujos de trabajo compatibles con pip. La documentación oficial está disponible en este enlace.
+5. [UV](https://docs.astral.sh/uv/) (*Recomendado*) Gestor de paquetes y entornos de Python, implementado en Rust y  caracterizado por su rapidez. UV crea entornos virtuales estándar y utiliza flujos de trabajo compatibles con `pip`. Durante este curso lo emplearemos como la opción recomendada para la instalación de los entornos de desarrollo para las unidades de trabajo.
 
 ## Gestión de paquetes y entornos con uv
-Aunque los estudiantes pueden elegir el método más conveniente para ellos, oficialmente este curso empleará `uv` como gestor de entornos y dependencias de Python. A continuación se describe brevemente **como gestionar los entornos a través de esta herramienta suponiendo que el S.O. es Linux**.
+Aunque los estudiantes pueden elegir el método más conveniente para ellos, "oficialmente" este curso empleará `uv` como gestor de entornos y dependencias de Python. A continuación se describe brevemente **como gestionar los entornos a través de esta herramienta suponiendo que el S.O. es Linux**.
+*Nota: la instalación en Windows o Mac es similar. Tenéis toda la información en su [documentación](https://docs.astral.sh/uv/getting-started/installation/) oficial
 
 ### Instalación de UV
 Existen [diferentes](https://docs.astral.sh/uv/getting-started/installation/) alternativas para instalar `uv`, incluyendo a través de pip, no obstante, `uv`proporciona un instalador independiente que descarga e instala la app en vuestro.
@@ -49,7 +52,8 @@ Suponiendo que hemos descargado el repositorio remoto a nuestra máquina, accede
 uv venv --python 3.12
 </code>
 
-Esto creará una carpeta oculta con el entorno virtual en `.venv`. Para este proyecto emplearemos la version 3.12 de Python.
+Esto creará una carpeta oculta con el entorno virtual en `.venv`. 
+**Importante**: Para este proyecto emplearemos la version 3.12 de Python.
 
 ### Activación del entorno
 Los entornos creados no están activados por defecto, es necesario activarlos para que las instalaciones de las dependencias se realicen en dicho entorno y no a nivel general del sistema.
@@ -60,10 +64,10 @@ source .venv/bin/activate
 </code>
 
 ### Desactivar el entorno completamente
-Es suficiente con ejecutar el comando `deactivate`
+Para desactivar el entorno es suficiente con ejecutar el comando `deactivate`
 
 ### Borrar un entorno
-Es suficiente con eliminar la carpeta oculta creada:
+Para borrar un entorno de forma definitiva es suficiente con eliminar la carpeta oculta creada:
 
 <code>
 rm -rf .venv
@@ -73,26 +77,26 @@ rm -rf .venv
 **Con el entorno correspondiente activado**, todas las dependencias están definidas en `requirements.txt` y estas se pueden instalar con: 
 
 <code>
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 </code>
 
-Como el entorno se creó con `uv`, el comando `pip` instala los paquetes dentro del entorno virtual activado.
+
 
 ### Instalar un solo paquete dentro del entorno virtual 
 Si necesitamos instalar un determinado paquete aislado, lo haremos directamente con `pip`:
 
 <code>
-pip install nombre_del_paquete
+uv pip install nombre_del_paquete
 </code>
 
 Ejemplo: 
 
 <code>
-pip install river
+uv pip install river
 </code>
 
 ### Ejecutar comandos dentro del entorno
-Si el entorno está activado, la ejecución de un comando en una terminal es la habitual  pero, si queremos ejecutar un comando sin activar el entorno o tenemos algún conflicto (tenemos entornos virtuales de CONDA y de `uv` al mismo tiempo), la forma de forzar a que el comando se ejecute en el marco del entorno virtual `uv` es:
+Si el entorno está activado, la ejecución de un comando en una terminal debería ser la habitual y automáticamente debería detectar que debe ser ejecutada dentro del entorno PERO si queremos ejecutar un comando sin activar el entorno **o si tenemos algún conflicto** ( ej. tenemos entornos virtuales de CONDA y de `uv` al mismo tiempo), la forma de forzar a que el comando se ejecute en el marco del entorno virtual `uv` es:
 
 <code>
 uv run comando
@@ -104,6 +108,8 @@ uv run jupyter notebook
 </code>
 Esto garantiza que el comando se ejecute utilizando el entorno virtual del proyecto.
 
+*Nota: por posibles problemas/conflictos, el formato de ejecución `uv run comando` suele ser más recomendable*
+
 ### Resumen de comandos de `uv`
 
 
@@ -111,17 +117,26 @@ Esto garantiza que el comando se ejecute utilizando el entorno virtual del proye
 |---|---|
 | Crear entorno | `uv venv` |
 | Activar entorno | `source .venv/bin/activate` |
-| Instalar dependencias (entorno activado) | `pip install -r requirements.txt` |
-| Instalar un solo paquete (entorno activado)| `pip install package_name` |
-| Instalar un paquete sin activación | `uv pip install package_name` |
+| Instalar dependencias (entorno activado) | `uv ip install -r requirements.txt` |
+| Instalar un solo paquete (entorno activado)| `uv pip install package_name` |
 | Ejecutar un comando sin activación | `uv run command` |
 
-
+### Listado de paquetes
+Aunque podéis instalar directamente todos los paquetes a través del `requirements.txt`, el listado de paquetes más relevante empleado en las prácticas es el siguiente:
+- tensorflow==2.21.0
+- river==0.23.0
+- scikit-learn==1.7.2
+- scipy==1.17.1
+- seaborn==0.13.2
+- pandas==2.3.3
+- numpy==2.4.4
+- keras==3.14.0
+- graphviz==0.21
 
 
 
 ## Gestión de paquetes y entornos con CONDA
-Se proporciona esta guía a modo *legacy* y para los estudiantes que prefieren gestionar el entorno virtual con CONDA, aunque el soporte desde la parte docente será limitado.
+Se proporciona esta guía a modo *legacy* para los estudiantes que prefieran gestionar el entorno virtual con CONDA, aunque el soporte desde la parte docente será limitado.
 
 
 **Documentación oficial: comandos de conda para la gestión de entornos virtuales**
@@ -144,6 +159,7 @@ Es posible indicar la versión específica de Python que contendrá el entorno v
 
 <code> conda create --name environment_name python=x.y.z</code>
 
+*Nota: emplearemos la versión de Python 3.12*
 **Activación del entorno**
 <code>conda activate  environment_name</code>
 
@@ -209,7 +225,7 @@ Para obtener la versión más reciente del paquete River, deberás instalarlo us
 
 <code>/home/user/anaconda/envs/miot_gdpi/bin/pip install river==0.23</code>
 
-**Nota**: En la actualidad River está en la versión 0.24 pero, por estabilidad, trabajaremos con la versión 0.23.
+**Nota**: En la actualidad River está en la versión 0.24 pero es muy reciente y, por estabilidad, trabajaremos con la versión 0.23.
 
 
 **Paquetes requeridos para las prácticas con modelos de redes neuronales profundas**
